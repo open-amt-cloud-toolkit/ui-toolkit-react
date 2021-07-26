@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-         node-version: 14.x
+          node-version: 14.x
       - name: Run NPM CI
         run: npm install
 
@@ -36,26 +36,34 @@ jobs:
 
       - name: Run Test
         run: npm run test
-        
+
+      - name: Run Coverage
+        run: npm run coverage
+
+      - uses: codecov/codecov-action@v1.2.1
+        name: Upload Coverage Results (SOL)
+        with:
+          directory: ./coverage/
+
       - name: Run Build Dev
         run: npm run build
-      
+
       - name: Run Build Externals
-        run: npm run build-ext  
-      
-      #checkout the dist branch    
+        run: npm run build-ext
+
+      #checkout the dist branch
       - uses: actions/checkout@v2
-        if: ${{ github.ref == 'refs/heads/main' }}      
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          path: 'to-be-published'
-          ref: 'dist'
+          path: "to-be-published"
+          ref: "dist"
       #copy the built dist content
-      - name: Copy 
-        if: ${{ github.ref == 'refs/heads/main' }}      
+      - name: Copy
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: cp -rlf dist/* ./to-be-published/
       #publish it
       - name: Publish content
-        if: ${{ github.ref == 'refs/heads/main' }}      
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           cd ./to-be-published
           git config user.name github-actions
@@ -63,4 +71,3 @@ jobs:
           git add .
           git commit -m 'ci: ${{github.event.head_commit.message}}'
           git push origin dist
-
