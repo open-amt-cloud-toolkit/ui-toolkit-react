@@ -1,6 +1,9 @@
 name: Changelog Generator
 
 on:  
+  push:
+    branches:
+      - main 
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -18,3 +21,13 @@ jobs:
           name: CHANGELOG-new.md
           path: |
             ./CHANGELOG-new.md
+      #publish it
+      - name: Publish content
+        if: ${{ github.ref == 'refs/heads/master' }}      
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add ./CHANGELOG-new.md
+          git commit -m 'docs(changelog): update changelog'
+          git push origin main
+      
