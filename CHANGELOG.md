@@ -3,7 +3,7 @@
 
 
 <a name="2.0.0"></a>
-## [2.0.0] - 2021-09-14
+## [2.0.0] - 2021-09-15
 ### Build
 - update version to v2.0.0 (#079605b) 
 - **deps:** bump sass from 1.38.2 to 1.39.0 (#a923943) 
@@ -36,6 +36,7 @@
 - **deps-dev:** bump css-loader from 5.2.7 to 6.2.0 (#5b96c3d) 
 
 ### Docs
+- **changelog:** update changelog (#d4f011c) 
 - **changelog:** update changelog (#98c129e) 
 
 ### Fix
