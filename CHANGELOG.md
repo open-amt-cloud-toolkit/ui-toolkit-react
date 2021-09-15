@@ -6,16 +6,17 @@
 ## [2.0.0] - 2021-09-15
 ### Build
 - update version to v2.0.0 (#079605b) 
+- **dep:** set ui-toolkit to 2.0.0 (#9db2419) 
 - **deps:** bump sass from 1.38.2 to 1.39.0 (#a923943) 
-- **deps:** bump ws from 8.2.1 to 8.2.2 (#88b1646) 
 - **deps:** bump xterm from 4.13.0 to 4.14.0 (#40262a5) 
 - **deps:** bump [@fortawesome](https://github.com/fortawesome)/free-solid-svg-icons (#1c4f0a5) 
+- **deps:** bump sass from 1.36.0 to 1.38.1 (#6d188a4) 
 - **deps:** bump react-i18next from 11.11.4 to 11.12.0 (#505f9c7) 
 - **deps:** bump i18next from 20.6.0 to 20.6.1 (#6b3443e) 
 - **deps:** bump ws from 7.5.3 to 8.2.1 (#ef2725d) 
 - **deps:** bump [@fortawesome](https://github.com/fortawesome)/fontawesome-svg-core (#2a49572) 
 - **deps:** bump [@fortawesome](https://github.com/fortawesome)/react-fontawesome from 0.1.14 to 0.1.15 (#8644d74) 
-- **deps:** bump sass from 1.36.0 to 1.38.1 (#6d188a4) 
+- **deps:** bump ws from 8.2.1 to 8.2.2 (#88b1646) 
 - **deps:** bump i18next from 20.5.0 to 20.6.0 (#b7d6f64) 
 - **deps-dev:** bump [@types](https://github.com/types)/jest from 26.0.24 to 27.0.1 (#6acf4c9) 
 - **deps-dev:** bump webpack from 5.51.1 to 5.52.0 (#ed1ef85) 
@@ -36,6 +37,7 @@
 - **deps-dev:** bump css-loader from 5.2.7 to 6.2.0 (#5b96c3d) 
 
 ### Docs
+- **changelog:** update changelog (#031f380) 
 - **changelog:** update changelog (#d4f011c) 
 - **changelog:** update changelog (#98c129e) 
 
