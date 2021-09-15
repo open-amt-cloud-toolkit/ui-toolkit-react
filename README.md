@@ -9,7 +9,7 @@ The UI Toolkit provides prebuilt, React-based components for integrating remote 
 
 <br><br>
 
-**For detailed documentation** about [Getting Started with the UI Toolkit](https://open-amt-cloud-toolkit.github.io/docs/1.4/Tutorials/uitoolkit) or other features of the Open AMT Cloud Toolkit, see the [docs](https://open-amt-cloud-toolkit.github.io/docs/).
+**For detailed documentation** about [Getting Started with the UI Toolkit](https://open-amt-cloud-toolkit.github.io/docs/2.0/Tutorials/uitoolkit) or other features of the Open AMT Cloud Toolkit, see the [docs](https://open-amt-cloud-toolkit.github.io/docs/).
 
 <br>
 
@@ -39,7 +39,7 @@ The React app can be created in any preferred development directory. The MPS can
 1. Run the following command to add the UI Toolkit and install the required dependencies:
 
     ``` bash
-    npm install @open-amt-cloud-toolkit/ui-toolkit
+    npm install @open-amt-cloud-toolkit/ui-toolkit-react
     ```
 
 2. Run the following commands to start the web UI locally:
@@ -59,7 +59,7 @@ The React app can be created in any preferred development directory. The MPS can
     ```
 
 
-Learn how to add the KVM control to your new React app [here](https://open-amt-cloud-toolkit.github.io/docs/1.4/Tutorials/uitoolkit/#add-a-sample-control)
+Learn how to add the KVM control to your new React app [here](https://open-amt-cloud-toolkit.github.io/docs/2.0/Tutorials/uitoolkit/#add-a-sample-control)
 
 
 For detailed documentation about the UI Toolkit, see the [docs](https://open-amt-cloud-toolkit.github.io/docs/)
