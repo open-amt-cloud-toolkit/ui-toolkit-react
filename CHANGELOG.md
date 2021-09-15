@@ -4,6 +4,12 @@
 
 <a name="2.0.0"></a>
 ## [2.0.0] - 2021-09-15
+### Docs
+- **readme:** update to 2.0 (#d7fb914) 
+
+
+<a name="v2.0.0"></a>
+## [v2.0.0] - 2021-09-15
 ### Build
 - update version to v2.0.0 (#079605b) 
 - **dep:** set ui-toolkit to 2.0.0 (#9db2419) 
@@ -37,6 +43,7 @@
 - **deps-dev:** bump css-loader from 5.2.7 to 6.2.0 (#5b96c3d) 
 
 ### Docs
+- **changelog:** update changelog (#ef938a1) 
 - **changelog:** update changelog (#031f380) 
 - **changelog:** update changelog (#d4f011c) 
 - **changelog:** update changelog (#98c129e) 
@@ -70,4 +77,5 @@
 
 
 [Unreleased]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/2.0.0...HEAD
-[2.0.0]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v1.5.0...2.0.0
+[2.0.0]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v2.0.0...2.0.0
+[v2.0.0]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v1.5.0...v2.0.0
