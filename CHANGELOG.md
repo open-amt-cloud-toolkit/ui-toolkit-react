@@ -35,6 +35,9 @@
 - **deps-dev:** bump webpack-dev-server from 4.1.1 to 4.2.0 (#4d93553) 
 - **deps-dev:** bump css-loader from 5.2.7 to 6.2.0 (#5b96c3d) 
 
+### Docs
+- **changelog:** update changelog (#98c129e) 
+
 ### Fix
 - **merge:** resolved merge conflicts (#8e92166) 
 - **update:** updated package-lock.json file (#79a7582) 

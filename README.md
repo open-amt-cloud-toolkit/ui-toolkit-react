@@ -1,4 +1,4 @@
-# UI Toolkit
+# UI Toolkit React
 
 [![Known Vulnerabilities](https://snyk.io/test/github/open-amt-cloud-toolkit/ui-toolkit/badge.svg?targetFile=package.json)](https://snyk.io/test/github/open-amt-cloud-toolkit/ui-toolkit?targetFile=package.json) ![Node.js CI](https://github.com/open-amt-cloud-toolkit/sample-web-ui/workflows/Node.js%20CI/badge.svg) 
 ![codecov.io](https://codecov.io/github/open-amt-cloud-toolkit/ui-toolkit-react/coverage.svg?branch=main)
