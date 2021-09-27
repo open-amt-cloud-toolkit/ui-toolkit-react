@@ -3,11 +3,13 @@
 
 
 <a name="2.0.0"></a>
-## [2.0.0] - 2021-09-22
+## [2.0.0] - 2021-09-27
 ### Build
+- **deps-dev:** bump jest from 27.1.1 to 27.2.1 (#5c50a80) 
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.0 to 4.31.2 (#7122144) 
 
 ### Docs
+- **changelog:** update changelog (#663a6ec) 
 - **changelog:** update changelog (#b94599c) 
 - **readme:** update to 2.0 (#d7fb914) 
 
