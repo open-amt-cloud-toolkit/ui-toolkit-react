@@ -7,12 +7,17 @@
 ### Build
 - **deps:** bump sass from 1.39.0 to 1.42.1 (#db4faf7) 
 - **deps:** bump xterm from 4.14.0 to 4.14.1 (#34d8729) 
+- **deps-dev:** bump webpack-dev-server from 4.2.0 to 4.3.0 (#a8bc963) 
+- **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.2 to 4.32.0 (#7a15496) 
 - **deps-dev:** bump webpack from 5.52.0 to 5.55.0 (#1d17823) 
 - **deps-dev:** bump jest from 27.1.1 to 27.2.1 (#5c50a80) 
+- **deps-dev:** bump typescript from 4.4.2 to 4.4.3 (#505d675) 
 - **deps-dev:** bump ts-loader from 9.2.5 to 9.2.6 (#3b42d21) 
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.0 to 4.31.2 (#7122144) 
+- **deps-dev:** bump jest from 27.2.1 to 27.2.3 (#e5470fa) 
 
 ### Docs
+- **changelog:** update changelog (#c9160ca) 
 - **changelog:** update changelog (#0915338) 
 - **changelog:** update changelog (#663a6ec) 
 - **changelog:** update changelog (#b94599c) 
