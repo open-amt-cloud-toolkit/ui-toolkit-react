@@ -3,7 +3,7 @@
 
 
 <a name="2.0.0"></a>
-## [2.0.0] - 2021-09-30
+## [2.0.0] - 2021-10-04
 ### Build
 - **deps:** bump xterm from 4.14.0 to 4.14.1 (#34d8729) 
 - **deps:** bump i18next from 20.6.1 to 21.2.0 (#79f82d8) 
@@ -28,11 +28,13 @@
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.25 to 17.0.26 (#0ef40ed) 
 
 ### Docs
+- add contributing guidlines (#8311a3a) 
+- **changelog:** update changelog (#6d04b12) 
 - **changelog:** update changelog (#6ed3d3b) 
 - **changelog:** update changelog (#debda86) 
 - **changelog:** update changelog (#53a3175) 
 - **changelog:** update changelog (#6515599) 
-- **changelog:** update changelog (#6d04b12) 
+- **changelog:** update changelog (#bcd6640) 
 - **changelog:** update changelog (#e14a416) 
 - **changelog:** update changelog (#c9160ca) 
 - **changelog:** update changelog (#0915338) 
