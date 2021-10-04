@@ -29,17 +29,19 @@
 
 ### Docs
 - add contributing guidlines (#8311a3a) 
-- **changelog:** update changelog (#6d04b12) 
+- **changelog:** update changelog (#b94599c) 
+- **changelog:** update changelog (#fa07251) 
+- **changelog:** update changelog (#bcd6640) 
 - **changelog:** update changelog (#6ed3d3b) 
 - **changelog:** update changelog (#debda86) 
 - **changelog:** update changelog (#53a3175) 
 - **changelog:** update changelog (#6515599) 
-- **changelog:** update changelog (#bcd6640) 
+- **changelog:** update changelog (#6d04b12) 
 - **changelog:** update changelog (#e14a416) 
 - **changelog:** update changelog (#c9160ca) 
 - **changelog:** update changelog (#0915338) 
 - **changelog:** update changelog (#663a6ec) 
-- **changelog:** update changelog (#b94599c) 
+- **github:** add pull request template (#85e95b8) 
 - **readme:** update to 2.0 (#d7fb914) 
 
 
