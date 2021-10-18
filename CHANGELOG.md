@@ -3,16 +3,17 @@
 
 
 <a name="2.0.0"></a>
-## [2.0.0] - 2021-10-17
+## [2.0.0] - 2021-10-18
 ### Build
 - **deps:** bump i18next from 21.2.4 to 21.2.6 (#7ead0c1) 
 - **deps:** bump sass from 1.39.0 to 1.42.1 (#db4faf7) 
 - **deps:** bump xterm from 4.14.0 to 4.14.1 (#34d8729) 
 - **deps:** bump i18next from 20.6.1 to 21.2.0 (#79f82d8) 
 - **deps:** bump i18next from 21.2.0 to 21.2.1 (#60a1ea0) 
+- **deps:** bump sass from 1.42.1 to 1.43.2 (#5f65a0e) 
 - **deps:** bump i18next from 21.2.1 to 21.2.4 (#3476eeb) 
 - **deps:** bump ws from 8.2.2 to 8.2.3 (#d512e22) 
-- **deps-dev:** bump ts-jest from 27.0.5 to 27.0.7 (#36f3b89) 
+- **deps-dev:** bump css-loader from 6.3.0 to 6.4.0 (#59e5074) 
 - **deps-dev:** bump typescript from 4.4.3 to 4.4.4 (#d796fc4) 
 - **deps-dev:** bump webpack-cli from 4.8.0 to 4.9.0 (#1332878) 
 - **deps-dev:** bump webpack from 5.56.0 to 5.58.1 (#7d88604) 
@@ -24,9 +25,9 @@
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.32.0 to 4.33.0 (#c2a6b6c) 
 - **deps-dev:** bump webpack-dev-server from 4.3.0 to 4.3.1 (#4f58863) 
 - **deps-dev:** bump webpack from 5.55.1 to 5.56.0 (#cb4ed03) 
-- **deps-dev:** bump css-loader from 6.3.0 to 6.4.0 (#59e5074) 
-- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.25 to 17.0.26 (#0ef40ed) 
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.27 to 17.0.30 (#617436a) 
+- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.25 to 17.0.26 (#0ef40ed) 
+- **deps-dev:** bump html-webpack-plugin from 5.3.2 to 5.4.0 (#a812747) 
 - **deps-dev:** bump webpack from 5.55.0 to 5.55.1 (#1aa9041) 
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.24 to 17.0.25 (#79bbd80) 
 - **deps-dev:** bump [@types](https://github.com/types)/ws from 7.4.7 to 8.2.0 (#7d89f58) 
@@ -40,16 +41,17 @@
 - **deps-dev:** bump webpack-dev-server from 4.2.0 to 4.3.0 (#a8bc963) 
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.2 to 4.32.0 (#7a15496) 
 - **deps-dev:** bump jest from 27.2.1 to 27.2.3 (#e5470fa) 
-- **deps-dev:** bump html-webpack-plugin from 5.3.2 to 5.4.0 (#a812747) 
-- **deps-dev:** bump jest from 27.1.1 to 27.2.1 (#5c50a80) 
 - **deps-dev:** bump jest from 27.2.5 to 27.3.0 (#ed964ba) 
+- **deps-dev:** bump jest from 27.1.1 to 27.2.1 (#5c50a80) 
+- **deps-dev:** bump ts-jest from 27.0.5 to 27.0.7 (#36f3b89) 
 - **deps-dev:** bump ts-loader from 9.2.5 to 9.2.6 (#3b42d21) 
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.0 to 4.31.2 (#7122144) 
 - **deps-dev:** bump webpack from 5.52.0 to 5.55.0 (#1d17823) 
 
 ### Docs
 - add contributing guidlines (#8311a3a) 
-- **changelog:** update changelog (#f822d25) 
+- **changelog:** update changelog (#492be7f) 
+- **changelog:** update changelog (#0094b9a) 
 - **changelog:** update changelog (#6b45397) 
 - **changelog:** update changelog (#43a7639) 
 - **changelog:** update changelog (#c2e7b1a) 
@@ -57,7 +59,7 @@
 - **changelog:** update changelog (#20be55d) 
 - **changelog:** update changelog (#b94599c) 
 - **changelog:** update changelog (#fa07251) 
-- **changelog:** update changelog (#0094b9a) 
+- **changelog:** update changelog (#f822d25) 
 - **changelog:** update changelog (#bcd6640) 
 - **changelog:** update changelog (#6ed3d3b) 
 - **changelog:** update changelog (#debda86) 
