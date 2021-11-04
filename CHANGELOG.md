@@ -3,7 +3,7 @@
 
 
 <a name="2.0.0"></a>
-## [2.0.0] - 2021-10-25
+## [2.0.0] - 2021-11-04
 ### Build
 - **deps:** bump styled-components from 5.3.1 to 5.3.3 (#296abe8) 
 - **deps:** bump sass from 1.43.2 to 1.43.3 (#d97b1da) 
@@ -65,8 +65,10 @@
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.2 to 4.32.0 (#7a15496) 
 
 ### Docs
+- adds issue template (#3d2f2e0) 
 - add contributing guidlines (#8311a3a) 
-- **changelog:** update changelog (#b94599c) 
+- **changelog:** update changelog (#20be55d) 
+- **changelog:** update changelog (#5e4cfe3) 
 - **changelog:** update changelog (#441ed46) 
 - **changelog:** update changelog (#32cd9b8) 
 - **changelog:** update changelog (#4394057) 
@@ -79,10 +81,10 @@
 - **changelog:** update changelog (#43a7639) 
 - **changelog:** update changelog (#c2e7b1a) 
 - **changelog:** update changelog (#135fb30) 
-- **changelog:** update changelog (#20be55d) 
 - **changelog:** update changelog (#6d0f882) 
+- **changelog:** update changelog (#b94599c) 
 - **changelog:** update changelog (#fa07251) 
-- **changelog:** update changelog (#5e4cfe3) 
+- **changelog:** update changelog (#f2dcae1) 
 - **changelog:** update changelog (#bcd6640) 
 - **changelog:** update changelog (#6ed3d3b) 
 - **changelog:** update changelog (#debda86) 
