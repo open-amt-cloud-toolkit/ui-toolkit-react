@@ -1,3 +1,7 @@
+<a name="unreleased"></a>
+## [Unreleased]
+
+
 <a name="2.0.2"></a>
 ## [2.0.2] - 2021-11-08
 ### Build
@@ -62,9 +66,9 @@
 - **version:** bump to v2.0.2 (#d703cb6) 
 
 ### Docs
-- add contributing guidlines (#8311a3a) 
 - adds issue template (#3d2f2e0) 
-- **changelog:** update changelog (#b228ac9) 
+- add contributing guidlines (#8311a3a) 
+- **changelog:** update changelog (#99c208d)  
 - **github:** add pull request template (#85e95b8) 
 - **readme:** update to 2.0 (#d7fb914) 
 
@@ -105,6 +109,7 @@
 
 ### Docs
 - **changelog:** update changelog (#ef938a1) 
+
 
 ### Fix
 - **merge:** resolved merge conflicts (#8e92166) 
