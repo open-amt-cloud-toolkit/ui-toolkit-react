@@ -1,33 +1,30 @@
-<a name="unreleased"></a>
-## [Unreleased]
-
-
-<a name="2.0.0"></a>
-## [2.0.0] - 2021-11-04
+<a name="2.0.2"></a>
+## [2.0.2] - 2021-11-08
 ### Build
 - **deps:** bump styled-components from 5.3.1 to 5.3.3 (#296abe8) 
-- **deps:** bump sass from 1.43.2 to 1.43.3 (#d97b1da) 
 - **deps:** bump sass from 1.39.0 to 1.42.1 (#db4faf7) 
+- **deps:** bump sass from 1.43.2 to 1.43.3 (#d97b1da) 
 - **deps:** bump xterm from 4.14.0 to 4.14.1 (#34d8729) 
 - **deps:** bump i18next from 20.6.1 to 21.2.0 (#79f82d8) 
+- **deps:** bump i18next from 21.2.0 to 21.2.1 (#60a1ea0) 
 - **deps:** bump i18next from 21.2.1 to 21.2.4 (#3476eeb) 
 - **deps:** bump ws from 8.2.2 to 8.2.3 (#d512e22) 
 - **deps:** bump i18next from 21.3.2 to 21.3.3 (#9bdf727) 
-- **deps:** bump i18next from 21.2.0 to 21.2.1 (#60a1ea0) 
 - **deps:** bump i18next from 21.2.4 to 21.2.6 (#7ead0c1) 
-- **deps:** bump [@fortawesome](https://github.com/fortawesome)/react-fontawesome from 0.1.15 to 0.1.16 (#605b297) 
 - **deps:** bump sass from 1.42.1 to 1.43.2 (#5f65a0e) 
+- **deps:** bump [@fortawesome](https://github.com/fortawesome)/react-fontawesome from 0.1.15 to 0.1.16 (#605b297) 
 - **deps:** bump i18next from 21.2.6 to 21.3.2 (#18b049f) 
 - **deps-dev:** bump [@types](https://github.com/types)/react-dom from 17.0.9 to 17.0.10 (#84882c5) 
-- **deps-dev:** bump webpack from 5.58.2 to 5.60.0 (#eacbdf9) 
-- **deps-dev:** bump webpack-cli from 4.9.0 to 4.9.1 (#a86381b) 
+- **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.0 to 4.31.2 (#7122144) 
 - **deps-dev:** bump jest from 27.3.0 to 27.3.1 (#ce4c501) 
+- **deps-dev:** bump webpack-cli from 4.9.0 to 4.9.1 (#a86381b) 
+- **deps-dev:** bump webpack from 5.58.1 to 5.58.2 (#b36a75c) 
 - **deps-dev:** bump ts-jest from 27.0.5 to 27.0.7 (#36f3b89) 
 - **deps-dev:** bump jest from 27.2.5 to 27.3.0 (#ed964ba) 
 - **deps-dev:** bump html-webpack-plugin from 5.3.2 to 5.4.0 (#a812747) 
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.27 to 17.0.30 (#617436a) 
 - **deps-dev:** bump css-loader from 6.3.0 to 6.4.0 (#59e5074) 
-- **deps-dev:** bump webpack from 5.58.1 to 5.58.2 (#b36a75c) 
+- **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.32.0 to 4.33.0 (#c2a6b6c) 
 - **deps-dev:** bump sass-loader from 12.1.0 to 12.2.0 (#672ff14) 
 - **deps-dev:** bump eslint-plugin-import from 2.24.2 to 2.25.2 (#16d3008) 
 - **deps-dev:** bump typescript from 4.4.3 to 4.4.4 (#d796fc4) 
@@ -41,9 +38,9 @@
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.30 to 17.0.32 (#28e5d24) 
 - **deps-dev:** bump webpack-dev-server from 4.3.0 to 4.3.1 (#4f58863) 
 - **deps-dev:** bump webpack from 5.55.1 to 5.56.0 (#cb4ed03) 
-- **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.32.0 to 4.33.0 (#c2a6b6c) 
-- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.25 to 17.0.26 (#0ef40ed) 
 - **deps-dev:** bump css-loader from 6.4.0 to 6.5.0 (#40cd7f9) 
+- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.25 to 17.0.26 (#0ef40ed) 
+- **deps-dev:** bump style-loader from 3.3.0 to 3.3.1 (#57bd11d) 
 - **deps-dev:** bump webpack from 5.55.0 to 5.55.1 (#1aa9041) 
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.24 to 17.0.25 (#79bbd80) 
 - **deps-dev:** bump [@types](https://github.com/types)/ws from 7.4.7 to 8.2.0 (#7d89f58) 
@@ -55,46 +52,19 @@
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/eslint-plugin (#d07d08f) 
 - **deps-dev:** bump typescript from 4.4.2 to 4.4.3 (#505d675) 
 - **deps-dev:** bump webpack-dev-server from 4.2.0 to 4.3.0 (#a8bc963) 
-- **deps-dev:** bump style-loader from 3.3.0 to 3.3.1 (#57bd11d) 
+- **deps-dev:** bump html-webpack-plugin from 5.4.0 to 5.5.0 (#455cf81) 
 - **deps-dev:** bump jest from 27.2.1 to 27.2.3 (#e5470fa) 
 - **deps-dev:** bump webpack from 5.52.0 to 5.55.0 (#1d17823) 
 - **deps-dev:** bump jest from 27.1.1 to 27.2.1 (#5c50a80) 
-- **deps-dev:** bump html-webpack-plugin from 5.4.0 to 5.5.0 (#455cf81) 
+- **deps-dev:** bump webpack from 5.58.2 to 5.60.0 (#eacbdf9) 
 - **deps-dev:** bump ts-loader from 9.2.5 to 9.2.6 (#3b42d21) 
-- **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.0 to 4.31.2 (#7122144) 
 - **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 4.31.2 to 4.32.0 (#7a15496) 
+- **version:** bump to v2.0.2 (#d703cb6) 
 
 ### Docs
-- adds issue template (#3d2f2e0) 
 - add contributing guidlines (#8311a3a) 
-- **changelog:** update changelog (#20be55d) 
-- **changelog:** update changelog (#5e4cfe3) 
-- **changelog:** update changelog (#441ed46) 
-- **changelog:** update changelog (#32cd9b8) 
-- **changelog:** update changelog (#4394057) 
-- **changelog:** update changelog (#58c05b0) 
-- **changelog:** update changelog (#8598ef1) 
-- **changelog:** update changelog (#492be7f) 
-- **changelog:** update changelog (#f822d25) 
-- **changelog:** update changelog (#0094b9a) 
-- **changelog:** update changelog (#6b45397) 
-- **changelog:** update changelog (#43a7639) 
-- **changelog:** update changelog (#c2e7b1a) 
-- **changelog:** update changelog (#135fb30) 
-- **changelog:** update changelog (#6d0f882) 
-- **changelog:** update changelog (#b94599c) 
-- **changelog:** update changelog (#fa07251) 
-- **changelog:** update changelog (#f2dcae1) 
-- **changelog:** update changelog (#bcd6640) 
-- **changelog:** update changelog (#6ed3d3b) 
-- **changelog:** update changelog (#debda86) 
-- **changelog:** update changelog (#53a3175) 
-- **changelog:** update changelog (#6515599) 
-- **changelog:** update changelog (#6d04b12) 
-- **changelog:** update changelog (#e14a416) 
-- **changelog:** update changelog (#c9160ca) 
-- **changelog:** update changelog (#0915338) 
-- **changelog:** update changelog (#663a6ec) 
+- adds issue template (#3d2f2e0) 
+- **changelog:** update changelog (#b228ac9) 
 - **github:** add pull request template (#85e95b8) 
 - **readme:** update to 2.0 (#d7fb914) 
 
@@ -135,9 +105,6 @@
 
 ### Docs
 - **changelog:** update changelog (#ef938a1) 
-- **changelog:** update changelog (#031f380) 
-- **changelog:** update changelog (#d4f011c) 
-- **changelog:** update changelog (#98c129e) 
 
 ### Fix
 - **merge:** resolved merge conflicts (#8e92166) 
@@ -167,6 +134,6 @@
 - **ui-tookit:** create react specific repo (#b67dbd2) 
 
 
-[Unreleased]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/2.0.0...HEAD
-[2.0.0]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v2.0.0...2.0.0
+[Unreleased]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/2.0.2...HEAD
+[2.0.2]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v2.0.0...2.0.2
 [v2.0.0]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v1.5.0...v2.0.0
