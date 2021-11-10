@@ -3,7 +3,13 @@
 
 
 <a name="2.0.2"></a>
-## [2.0.2] - 2021-11-08
+## [2.0.2] - 2021-11-10
+### Build
+- **deps:** bump react-i18next from 11.12.0 to 11.14.1 (#885d690) 
+
+
+<a name="v2.0.2"></a>
+## [v2.0.2] - 2021-11-09
 ### Build
 - **deps:** bump styled-components from 5.3.1 to 5.3.3 (#296abe8) 
 - **deps:** bump sass from 1.39.0 to 1.42.1 (#db4faf7) 
@@ -68,8 +74,9 @@
 ### Docs
 - adds issue template (#3d2f2e0) 
 - add contributing guidlines (#8311a3a) 
-- **changelog:** update changelog (#5527a33) 
+- **changelog:** update changelog (#bd657ed) 
 - **changelog:** update changelog (#b228ac9) 
+- **changelog:** update changelog (#99c208d) 
 - **changelog:** update changelog (#f2dcae1) 
 - **changelog:** update changelog (#6d0f882) 
 - **changelog:** update changelog (#5e4cfe3) 
@@ -88,7 +95,7 @@
 - **changelog:** update changelog (#20be55d) 
 - **changelog:** update changelog (#b94599c) 
 - **changelog:** update changelog (#fa07251) 
-- **changelog:** update changelog (#99c208d) 
+- **changelog:** update changelog (#5527a33) 
 - **changelog:** update changelog (#bcd6640) 
 - **changelog:** update changelog (#6ed3d3b) 
 - **changelog:** update changelog (#debda86) 
@@ -172,5 +179,6 @@
 
 
 [Unreleased]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/2.0.2...HEAD
-[2.0.2]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v2.0.0...2.0.2
+[2.0.2]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v2.0.2...2.0.2
+[v2.0.2]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v2.0.0...v2.0.2
 [v2.0.0]: https://github.com/open-amt-cloud-toolkit/ui-toolkit/compare/v1.5.0...v2.0.0
