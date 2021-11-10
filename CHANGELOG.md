@@ -3,9 +3,13 @@
 
 
 <a name="2.0.2"></a>
-## [2.0.2] - 2021-11-10
+## [2.0.2] - 2021-11-03
 ### Build
 - **deps:** bump react-i18next from 11.12.0 to 11.14.1 (#885d690) 
+- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.34 (#39d84ca) 
+
+### Docs
+- **changelog:** update changelog (#8c87843) 
 
 
 <a name="v2.0.2"></a>
