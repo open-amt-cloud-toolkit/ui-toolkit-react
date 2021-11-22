@@ -3,8 +3,9 @@
 
 
 <a name="2.0.2"></a>
-## [2.0.2] - 2021-11-15
+## [2.0.2] - 2021-11-22
 ### Build
+- **deps:** bump i18next from 21.3.3 to 21.5.2 (#f4823c7) 
 - **deps:** bump react-i18next from 11.12.0 to 11.14.1 (#885d690) 
 - **deps:** bump [@open](https://github.com/open)-amt-cloud-toolkit/ui-toolkit from 2.0.2 to 2.0.3 (#f732467) 
 - **deps:** bump sass from 1.43.3 to 1.43.4 (#040e81d) 
@@ -14,6 +15,7 @@
 - **deps-dev:** bump webpack-dev-server from 4.3.1 to 4.5.0 (#8257935) 
 
 ### Docs
+- **changelog:** update changelog (#fde6b3c) 
 - **changelog:** update changelog (#2515dd0) 
 - **changelog:** update changelog (#658c2e0) 
 - **changelog:** update changelog (#8c87843) 
