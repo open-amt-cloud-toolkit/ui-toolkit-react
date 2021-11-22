@@ -3,16 +3,18 @@
 
 
 <a name="2.0.2"></a>
-## [2.0.2] - 2021-11-10
+## [2.0.2] - 2021-11-15
 ### Build
+- **deps:** bump react-i18next from 11.12.0 to 11.14.1 (#885d690) 
 - **deps:** bump [@open](https://github.com/open)-amt-cloud-toolkit/ui-toolkit from 2.0.2 to 2.0.3 (#f732467) 
 - **deps:** bump sass from 1.43.3 to 1.43.4 (#040e81d) 
-- **deps:** bump react-i18next from 11.12.0 to 11.14.1 (#885d690) 
 - **deps-dev:** bump eslint-plugin-import from 2.25.2 to 2.25.3 (#8309e4c) 
 - **deps-dev:** bump sass-loader from 12.2.0 to 12.3.0 (#c4cbb73) 
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.34 (#39d84ca) 
+- **deps-dev:** bump webpack-dev-server from 4.3.1 to 4.5.0 (#8257935) 
 
 ### Docs
+- **changelog:** update changelog (#2515dd0) 
 - **changelog:** update changelog (#658c2e0) 
 - **changelog:** update changelog (#8c87843) 
 
