@@ -3,7 +3,7 @@
 
 
 <a name="2.0.2"></a>
-## [2.0.2] - 2021-11-25
+## [2.0.2] - 2021-11-29
 ### Build
 - **deps:** bump react-i18next from 11.14.1 to 11.14.2 (#9a134fb) 
 - **deps:** bump sass from 1.43.3 to 1.43.4 (#040e81d) 
@@ -28,7 +28,11 @@
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.34 (#39d84ca) 
 - **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.36 (#e6d2389) 
 
+### Ci
+- **node:** bump from 14.x to 16.x (#e7f201d) 
+
 ### Docs
+- **changelog:** update changelog (#7c2ee2c) 
 - **changelog:** update changelog (#70a5601) 
 - **changelog:** update changelog (#2846fba) 
 - **changelog:** update changelog (#d1670ca) 
