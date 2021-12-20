@@ -3,37 +3,40 @@
 
 
 <a name="2.0.2"></a>
-## [2.0.2] - 2021-11-29
+## [2.0.2] - 2021-12-13
 ### Build
 - **deps:** bump react-i18next from 11.14.1 to 11.14.2 (#9a134fb) 
-- **deps:** bump i18next from 21.5.3 to 21.5.6 (#270ec89) 
-- **deps:** bump sass from 1.43.3 to 1.43.5 (#7ee282c) 
 - **deps:** bump sass from 1.43.3 to 1.43.4 (#040e81d) 
 - **deps:** bump [@open](https://github.com/open)-amt-cloud-toolkit/ui-toolkit from 2.0.2 to 2.0.3 (#f732467) 
+- **deps:** bump i18next from 21.5.3 to 21.5.6 (#270ec89) 
+- **deps:** bump sass from 1.43.3 to 1.43.5 (#7ee282c) 
+- **deps:** bump i18next from 21.3.3 to 21.5.2 (#f4823c7) 
+- **deps:** bump xterm from 4.14.1 to 4.15.0 (#b29a382) 
 - **deps:** bump i18next from 21.5.2 to 21.5.3 (#c2e1024) 
 - **deps:** bump ws from 8.2.3 to 8.3.0 (#3c7022f) 
 - **deps:** bump react-i18next from 11.14.2 to 11.14.3 (#a68e893) 
-- **deps:** bump i18next from 21.3.3 to 21.5.2 (#f4823c7) 
-- **deps:** bump xterm from 4.14.1 to 4.15.0 (#b29a382) 
+- **deps:** bump sass from 1.43.5 to 1.45.0 (#90b58ee) 
 - **deps:** bump react-i18next from 11.12.0 to 11.14.1 (#885d690) 
-- **deps-dev:** bump css-loader from 6.5.0 to 6.5.1 (#defa175) 
-- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 17.0.10 to 17.0.11 (#034fc32) 
-- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.36 (#e6d2389) 
-- **deps-dev:** bump [@types](https://github.com/types)/jest from 27.0.2 to 27.0.3 (#f7e13b4) 
-- **deps-dev:** bump webpack from 5.60.0 to 5.64.2 (#1235c57) 
+- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.36 to 17.0.37 (#b718585) 
 - **deps-dev:** bump sass-loader from 12.2.0 to 12.3.0 (#6694885) 
+- **deps-dev:** bump css-loader from 6.5.0 to 6.5.1 (#defa175) 
+- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.36 (#e6d2389) 
+- **deps-dev:** bump webpack from 5.64.2 to 5.64.4 (#2470ae3) 
+- **deps-dev:** bump webpack from 5.60.0 to 5.64.2 (#1235c57) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 17.0.10 to 17.0.11 (#034fc32) 
 - **deps-dev:** bump webpack-dev-server from 4.3.1 to 4.5.0 (#8257935) 
 - **deps-dev:** bump eslint-plugin-import from 2.25.2 to 2.25.3 (#8309e4c) 
-- **deps-dev:** bump webpack from 5.64.2 to 5.64.4 (#2470ae3) 
-- **deps-dev:** bump sass-loader from 12.2.0 to 12.3.0 (#c4cbb73) 
-- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.36 to 17.0.37 (#b718585) 
-- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.34 (#39d84ca) 
 - **deps-dev:** bump webpack-dev-server from 4.5.0 to 4.6.0 (#7cf6b2e) 
+- **deps-dev:** bump sass-loader from 12.2.0 to 12.3.0 (#c4cbb73) 
+- **deps-dev:** bump webpack from 5.64.4 to 5.65.0 (#b61315f) 
+- **deps-dev:** bump [@types](https://github.com/types)/react from 17.0.32 to 17.0.34 (#39d84ca) 
+- **deps-dev:** bump [@types](https://github.com/types)/jest from 27.0.2 to 27.0.3 (#f7e13b4) 
 
 ### Ci
 - **node:** bump from 14.x to 16.x (#e7f201d) 
 
 ### Docs
+- **changelog:** update changelog (#442a81d) 
 - **changelog:** update changelog (#463593a) 
 - **changelog:** update changelog (#e645163) 
 - **changelog:** update changelog (#7c2ee2c) 
