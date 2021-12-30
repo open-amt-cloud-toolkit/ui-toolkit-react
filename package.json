@@ -24,7 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.13",
     "@open-amt-cloud-toolkit/ui-toolkit": "^2.0.0",
-    "i18next": "^21.2.0",
+    "i18next": "^21.6.0",
     "i18next-browser-languagedetector": "^6.1.2",
     "md5": "^2.2.1",
     "moment": "^2.24.0",
