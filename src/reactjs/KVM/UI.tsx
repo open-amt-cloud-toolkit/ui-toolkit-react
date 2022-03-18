@@ -4,8 +4,7 @@
  * Author : Ramu Bachala
  **********************************************************************/
 
-import { IDataProcessor, IKvmDataCommunicator, ILogger, LogLevel, DataProcessor, Desktop, AMTKvmDataRedirector, AMTDesktop, Protocol, ConsoleLogger } from '@open-amt-cloud-toolkit/ui-toolkit/core'
-import { MouseHelper, KeyBoardHelper } from '@open-amt-cloud-toolkit/ui-toolkit/core'
+import { IDataProcessor, IKvmDataCommunicator, ILogger, LogLevel, DataProcessor, Desktop, AMTKvmDataRedirector, AMTDesktop, Protocol, ConsoleLogger, MouseHelper, KeyBoardHelper } from '@open-amt-cloud-toolkit/ui-toolkit/core'
 import { Header } from './Header'
 import { PureCanvas } from './PureCanvas'
 import { isFalsy } from '../shared/Utilities'

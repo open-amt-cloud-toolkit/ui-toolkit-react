@@ -6,7 +6,6 @@
 import React from 'react'
 import { AmtTerminal, AMTRedirector, Protocol, ConsoleLogger, LogLevel, TerminalDataProcessor } from '@open-amt-cloud-toolkit/ui-toolkit/core'
 import Style from 'styled-components'
-
 import { Terminal } from 'xterm'
 import Term from './Terminal'
 import 'xterm/css/xterm.css'
