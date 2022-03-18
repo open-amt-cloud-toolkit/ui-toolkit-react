@@ -68,3 +68,4 @@ For detailed documentation about the UI Toolkit, see the [docs](https://open-amt
 ## License Note
 
 If you are distributing the FortAwesome Icons, please provide attribution to the source per the [CC-by 4.0](https://creativecommons.org/licenses/by/4.0/deed.ast) license obligations.
+
