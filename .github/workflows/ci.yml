@@ -71,8 +71,9 @@ jobs:
           git add .
           git commit -m 'ci: ${{github.event.head_commit.message}}'
           git push origin dist
+      - run: mv junit.xml ui-toolkit-react-unit.xml
       - name: Upload JEST Results
         uses: actions/upload-artifact@v3
         with:
           name: ui-toolkit-react-unit
-          path: junit.xml
+          path: ui-toolkit-react-unit.xml
