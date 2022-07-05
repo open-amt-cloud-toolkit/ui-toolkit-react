@@ -25,6 +25,7 @@ module.exports = {
     '**/test/**/*.test.tsx',
     '**/test/**/*.spec.js'
   ],
+  reporters: ["default", "jest-junit"],
   testEnvironment: 'jsdom',
   setupFiles: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
