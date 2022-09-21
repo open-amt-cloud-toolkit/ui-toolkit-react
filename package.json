@@ -39,7 +39,7 @@
     "styled-components": "^5.3.0",
     "winston": "^3.0.0",
     "ws": "^8.2.1",
-    "xterm": "^4.13.0"
+    "xterm": "^5.0.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.8",
