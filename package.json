@@ -22,8 +22,8 @@
   "homepage": "https://github.com/open-amt-cloud-toolkit/ui-toolkit-react#readme",
   "types": "index.d.ts",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
