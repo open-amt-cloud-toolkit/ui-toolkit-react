@@ -3,10 +3,17 @@
 * SPDX-License-Identifier: Apache-2.0
 **********************************************************************/
 .sol-header {
-    display: flex;
+	display: flex;
 }
 .power-options {
 	display: block;
 	position: absolute;
 	right: 1%;
+}
+.terminal {
+	text-align: left;
+	display:block;
+}
+.terminal_xterm{
+	display:inline-block;
 }

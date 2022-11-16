@@ -32,7 +32,7 @@ export class PureCanvas extends React.Component<PureCanvasProps, {}> {
       onMouseMove: this.props.mouseMove
     }
     return (
-      <canvas {...canvasAttributes} className="canvas" ref={(c: any) => isFalsy(c) ? this.props.contextRef(c.getContext('2d')) : null}/>
+      <canvas {...canvasAttributes} data-testid="pure-canvas-testid" className="canvas" ref={(c: any) => isFalsy(c) ? this.props.contextRef(c.getContext('2d')) : null}/>
     )
   }
 }

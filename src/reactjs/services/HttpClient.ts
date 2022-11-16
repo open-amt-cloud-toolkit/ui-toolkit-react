@@ -20,7 +20,7 @@ export const HttpClient = {
     return await HttpClient.fetch(url, {
       ...options,
       method: 'POST',
-      body: body,
+      body,
       headers: jsonHeaders
     })
   },

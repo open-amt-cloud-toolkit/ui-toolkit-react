@@ -5,57 +5,34 @@
 
 import React from 'react'
 import { ConnectButton, ConnectProps } from '../reactjs/KVM/ConnectButton'
-import { shallow } from 'enzyme'
+import { render, screen } from '@testing-library/react'
 
 describe('Test ConnectButton', () => {
-  it('Test render() in ConnectButton with kvmstate == 1', () => {
-    // Initialization of ConnectProps
-    const connectbuttonprops: ConnectProps = {
-      kvmstate: (1),
-      handleConnectClick: (event: React.MouseEvent) => {}
+  interface TestInput {
+    state: number
+    label: string
+  }
+
+  test.each<TestInput>([
+    {
+      state: 0,
+      label: 'Connect KVM'
+    },
+    {
+      state: 1,
+      label: 'Connecting KVM'
+    },
+    {
+      state: 2,
+      label: 'Disconnect KVM'
     }
 
-    const cb = shallow(<ConnectButton {...connectbuttonprops} />)
-
-    // Output
-    expect(cb.prop('onClick')).toBe(connectbuttonprops.handleConnectClick)
-    expect(cb.prop('children')).toBe('Connecting KVM')
-    expect(cb).toMatchSnapshot()
-    console.log(cb.debug())
-    console.log(cb.props())
-  })
-
-  it('Test render() in ConnectButton with kvmstate == 2', () => {
-    // Initialization of ConnectProps
+  ])('should render button with text $label when kvm state is [$state]', async (ti) => {
     const connectbuttonprops: ConnectProps = {
-      kvmstate: (2),
-      handleConnectClick: (event: React.MouseEvent) => {}
+      kvmstate: ti.state,
+      handleConnectClick: () => {}
     }
-
-    const cb = shallow(<ConnectButton {...connectbuttonprops} />)
-
-    // Output
-    expect(cb.prop('onClick')).toBe(connectbuttonprops.handleConnectClick)
-    expect(cb.prop('children')).toBe('Disconnect KVM')
-    expect(cb).toMatchSnapshot()
-    console.log(cb.debug())
-    console.log(cb.props())
-  })
-
-  it('Test render() in ConnectButton with kvmstate == 0', () => {
-    // Initialization of ConnectProps
-    const connectbuttonprops: ConnectProps = {
-      kvmstate: (0),
-      handleConnectClick: (event: React.MouseEvent) => {}
-    }
-
-    const cb = shallow(<ConnectButton {...connectbuttonprops} />)
-
-    // Output
-    expect(cb.prop('onClick')).toBe(connectbuttonprops.handleConnectClick)
-    expect(cb.prop('children')).toBe('Connect KVM')
-    expect(cb).toMatchSnapshot()
-    console.log(cb.debug())
-    console.log(cb.props())
+    render(<ConnectButton {...connectbuttonprops} />)
+    expect(screen.getByRole('button', { name: ti.label })).toBeInTheDocument()
   })
 })

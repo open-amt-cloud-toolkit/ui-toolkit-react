@@ -18,4 +18,4 @@ export const prepareHeaders = (): any => {
   return headers
 }
 
-export const isFalsy = (value: any): boolean => value !== null && value !== undefined && value !== '' && value !== false && value !== 0
+export const isFalsy = (value: any): boolean => value != null && value !== '' && value !== false && value !== 0

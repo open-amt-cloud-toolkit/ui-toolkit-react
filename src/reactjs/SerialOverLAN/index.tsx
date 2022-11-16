@@ -4,7 +4,7 @@
 **********************************************************************/
 
 import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Sol } from './Sol'
 import i18n from '../../i18n'
 // Get browser language
@@ -13,4 +13,8 @@ i18n.changeLanguage(navigator.language).catch(() => console.info('error occured'
 const url = new URL(window.location.href)
 const params = new URLSearchParams(url.search)
 
-render(<Sol deviceId={params.get('deviceId')} authToken="authToken" mpsServer={params.get('mpsServer')} />, document.getElementById('sol'))
+const rootElement = document.getElementById('sol')
+if (rootElement != null){
+  const root = createRoot(rootElement)
+  root.render(<Sol deviceId={params.get('deviceId')} authToken="authToken" mpsServer={params.get('mpsServer')} />)
+}
