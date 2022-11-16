@@ -162,13 +162,11 @@ export class Sol extends React.Component<SOLProps, SOLStates> {
     const { SOLstate } = this.state
     return (
       <React.Fragment>
-        <HeaderStrip>
-          <StyledDiv>
-            <button onClick={this.handleSOLConnect}>{SOLstate === 3 ? 'Disconnect' : 'Connect'}</button>
-          </StyledDiv>
-        </HeaderStrip>
+        <button onClick={this.handleSOLConnect}>{SOLstate === 3 ? 'Disconnect' : 'Connect'}</button>
         {SOLstate === 3 && this.term && <Term handleKeyPress={this.handleKeyPress} handleKeyDownPress={this.handleKeyDownPress} xterm={this.term} />}
       </React.Fragment>
     )
   }
 }
+
+

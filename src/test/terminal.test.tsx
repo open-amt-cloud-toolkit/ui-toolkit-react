@@ -2,34 +2,43 @@
 * Copyright (c) Intel Corporation 2019
 * SPDX-License-Identifier: Apache-2.0
 **********************************************************************/
-import Term, { IPropTerminal } from '../reactjs/SerialOverLAN/Terminal'
-import { Terminal } from 'xterm'
 
 import React from 'react'
-import { shallow } from 'enzyme'
+import Term, { IPropTerminal } from '../reactjs/SerialOverLAN/Terminal'
+import { Terminal as XTerm } from 'xterm'
+import { render } from '@testing-library/react'
 
-describe('Test Term class', () => {
-  it('Test render() in Term class', () => {
-    const t = new Terminal({
+describe('Testing SOL Terminal', () => {
+  let xterm: XTerm
+  let props: IPropTerminal
+  beforeEach(() => {
+    xterm = new XTerm({
       cursorStyle: 'block',
       fontWeight: 'bold',
       rows: 30,
       cols: 100
     })
 
-    const handleKeyPress = (domEvent): any => jest.fn()
-    const handleKeyDownPress = (domEvent): any => jest.fn()
-    // Initialization of ConnectProps
-    const terminal: IPropTerminal = {
-      handleKeyPress: (handleKeyPress),
-      xterm: (t),
-      handleKeyDownPress: (handleKeyDownPress)
+    props = {
+      handleKeyPress: jest.fn(),
+      xterm,
+      handleKeyDownPress: jest.fn()
     }
+  })
 
-    const term = shallow(<Term { ...terminal } />)
+  it('should render successfully', () => {
+    const openSpy = jest.spyOn(xterm, 'open').mockImplementation()
+    const container = render(<Term {...props} />)
+    expect(container).not.toBeNull()
+    expect(openSpy).toHaveBeenCalled()
+  })
 
-    // Output
-    console.log(term.debug())
-    expect(term).toMatchSnapshot()
+  it('should render only once', () => {
+    const term = new Term(props)
+    expect(term.mountedWorkaround).toBeFalsy()
+    term.componentDidMount()
+    expect(term.mountedWorkaround).toBeTruthy()
+    term.componentDidMount()
+    expect(term.mountedWorkaround).toBeTruthy()
   })
 })

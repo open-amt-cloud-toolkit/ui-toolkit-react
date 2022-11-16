@@ -2,276 +2,71 @@
 * Copyright (c) Intel Corporation 2019
 * SPDX-License-Identifier: Apache-2.0
 **********************************************************************/
-import { Sol, SOLProps } from '../reactjs/SerialOverLAN/Sol'
-import { HttpClient } from '../reactjs/services/HttpClient'
-import { AMTRedirector1, Protocol } from './helper/amtredirector1'
-import { Mockeventpersist } from './helper/mockeventpersist'
 
 import React from 'react'
-import { shallow } from 'enzyme'
-import { Terminal } from './helper/terminal'
-import { AmtTerminal } from '@open-amt-cloud-toolkit/ui-toolkit/core'
-// import { FileReader } from '../core/FileReader'
+import { Sol, SOLProps } from '../reactjs/SerialOverLAN/Sol'
+import { render } from '@testing-library/react'
+import restoreAllMocks = jest.restoreAllMocks
 
-const solprop: SOLProps = {
-  deviceId: 'acfae359-be7b-4861-8e0c-54b20389bb68',
-  mpsServer: 'https://localhost:9300',
-  authToken: 'authToken'
-}
+let props: SOLProps
+beforeEach(() => {
+  props = {
+    deviceId: 'acfae359-be7b-4861-8e0c-54b20389bb68',
+    mpsServer: 'https://localhost:9300',
+    authToken: 'authToken'
+  }
+})
 
-describe('Test Sol class', () => {
-  // const fr: FileReader = {
-  //   onload: jest.fn(),
-  //   onloadend: jest.fn(),
-  //   readAsArrayBuffer: jest.fn(),
-  //   readAsBinaryString: jest.fn()
-  // }
-  it('Test Sol render', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-
-    // shallow
-    const sol = shallow(<Sol {...solprop} />)
-
-    // Output
-    expect(sol).toMatchSnapshot()
+describe('Testing purely SOL UI', () => {
+  it('should render successfully', () => {
+    const container = render(<Sol {...props} />)
+    expect(container).not.toBeNull()
   })
+})
 
-  it('Test handlePowerOptions with failure', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
+describe('Testing SOL Terminal', () => {
+  let sol
+  let redirector
+  let term
+  let terminal
+  beforeEach(() => {
+    restoreAllMocks()
+    redirector = {
+      start: jest.fn(),
+      stop: jest.fn()
     }
-    HttpClient.post = jest.fn(async function (arg1, arg2, arg3) {
-      return await new Promise((resolve, reject) => {
-        resolve({
-          Body: {
-            ReturnValueStr: 'FAIL'
-          }
-        })
-      })
+    term = {
+      reset: jest.fn(),
+      write: jest.fn()
+    }
+    terminal = {
+      TermSendKeys: jest.fn(),
+      handleKeyDownEvents: jest.fn()
+    }
+
+    sol = new Sol(props)
+    sol.setState = jest.fn((newState: any) => {
+      Object.assign(sol.state, sol.state, newState)
     })
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-    console.info('myinstance', myInstance)
-
-    // call the function and check the expected output
-    // return myInstance.handlePowerOptions(ev).then(data => expect(myInstance.state.message).toEqual("Sorry! there was some technical difficulties"));
+    sol.init = jest.fn()
+    sol.dataProcessor = {}
+    sol.redirector = redirector
+    sol.term = term
+    sol.terminal = terminal
   })
+  it('should handle state changes', () => {
+    sol.onTerminalStateChange({}, 0)
+    sol.handleSOLConnect({ persist: jest.fn() })
+    expect(redirector.start).toHaveBeenCalledTimes(1)
+    expect(redirector.stop).toHaveBeenCalledTimes(0)
 
-  it('Test onTerminalStateChange', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-
-    // call the function and check the expected output
-    myInstance.onTerminalStateChange(null, 2)
-    expect(myInstance.state.SOLstate).toBe(2)
-  })
-
-  it('Test startSOL', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-    myInstance.redirector = new AMTRedirector1(myInstance.logger,
-      Protocol.SOL,
-      new FileReader(),
-      'abcd-efgh-ijkl-mnop',
-      16994,
-      '',
-      '',
-      0,
-      0,
-      'authToken',
-      '1.2.3.4:9876' + '/relay')
-
-    // call the function and check the expected output
-    myInstance.startSOL()
-    expect(myInstance.redirector.startvariable).toBe(5)
-  })
-
-  it('Test stopSOL', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-    myInstance.redirector = new AMTRedirector1(myInstance.logger,
-      Protocol.SOL,
-      new FileReader(),
-      'abcd-efgh-ijkl-mnop',
-      16994,
-      '',
-      '',
-      0,
-      0,
-      'authToken',
-      '1.2.3.4:9876' + '/relay')
-
-    // call the function and check the expected output
-    myInstance.startSOL()
-    myInstance.stopSOL()
-    expect(myInstance.state.SOLstate).toBe(0)
-  })
-
-  it('Test onTerminalStateChange', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-
-    // call the function and check the expected output
-    myInstance.onTerminalStateChange(null, 4)
-    expect(myInstance.state.SOLstate).toBe(4)
-  })
-
-  it('Test handleSOLConnect to start', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-    const e = new Mockeventpersist()
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-
-    myInstance.redirector = new AMTRedirector1(myInstance.logger,
-      Protocol.SOL,
-      new FileReader(),
-      'abcd-efgh-ijkl-mnop',
-      16994,
-      '',
-      '',
-      0,
-      0,
-      'authToken',
-      '1.2.3.4:9876' + '/relay')
-
-    // call the function and check the expected output
-    myInstance.onTerminalStateChange(null, 0)
-    myInstance.handleSOLConnect(e)
-    expect(myInstance.redirector.startvariable).toBe(5)
-  })
-
-  it('Test handleSOLConnect to stop', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-    const e = new Mockeventpersist()
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-
-    myInstance.redirector = new AMTRedirector1(myInstance.logger,
-      Protocol.SOL,
-      new FileReader(),
-      'abcd-efgh-ijkl-mnop',
-      16994,
-      '',
-      '',
-      0,
-      0,
-      'authToken',
-      '1.2.3.4:9876' + '/relay')
-
-    // call the function and check the expected output
-    myInstance.onTerminalStateChange(null, 1)
-    myInstance.handleSOLConnect(e)
-    expect(myInstance.state.isConnected).toBe(false)
-    expect(myInstance.state.SOLstate).toBe(1)
-  })
-
-  it('Test handleWriteToXterm', () => {
-    // Initialization of ConnectProps
-    const solprop: SOLProps = {
-      deviceId: 'abcd-efh-ijkl-mnop',
-      mpsServer: '1.2.3.4:1234',
-      authToken: 'authToken'
-    }
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-    myInstance.term = new Terminal()
-
-    // call the function and check the expected output
-    myInstance.handleWriteToXterm('abcdef')
-    expect(myInstance.term.writestring).toBe('abcdef')
-  })
-
-  it('Test handleClearTerminal', () => {
-    // Initialization of ConnectProps
-
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-    myInstance.term = new Terminal()
-
-    // call the function and check the expected output
-    myInstance.handleClearTerminal()
-    expect(myInstance.term.resetvalue).toBe(1)
-  })
-
-  it('should call the handle key events on trigger ', () => {
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-
-    myInstance.terminal = new AmtTerminal()
-    myInstance.terminal.TermSendKeys = jest.fn((domEvent) => { })
-    myInstance.terminal.handleKeyDownEvents = jest.fn((domEvent) => { })
-
-    const domEvent = {
-      target: {
-        value: ''
-      }
-    }
-    myInstance.handleKeyPress(domEvent)
-    myInstance.handleKeyDownPress(domEvent)
-    expect(myInstance.terminal.TermSendKeys).toHaveBeenCalled()
-  })
-
-  it('should update the component from the child component on the feature and power status', () => {
-    const sol = shallow(<Sol {...solprop} />)
-    const myInstance = sol.instance() as Sol
-
-    myInstance.handleFeatureStatus('enabled')
-    expect(sol.state('solNotEnabled')).toEqual('enabled')
-
-    myInstance.handleFeatureStatus('notEnabled')
-    expect(sol.state('solNotEnabled')).toEqual('notEnabled')
-
-    myInstance.handleFeatureStatus('failed')
-    expect(sol.state('solNotEnabled')).toEqual('failed')
+    const cleanUpSpy = jest.spyOn(sol, 'cleanUp')
+    sol.onTerminalStateChange({}, 3)
+    sol.handleSOLConnect({ persist: jest.fn() })
+    expect(redirector.start).toHaveBeenCalledTimes(1)
+    expect(redirector.stop).toHaveBeenCalledTimes(1)
+    expect(term.reset).toHaveBeenCalledTimes(1)
+    expect(cleanUpSpy).toHaveBeenCalledTimes(1)
+    expect(sol.init).toHaveBeenCalledTimes(1)
   })
 })

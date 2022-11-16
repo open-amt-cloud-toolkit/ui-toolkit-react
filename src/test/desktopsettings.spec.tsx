@@ -5,61 +5,23 @@
 
 import React from 'react'
 import { IDesktopSettings, DesktopSettings } from '../reactjs/KVM/DesktopSettings'
-import { shallow } from 'enzyme'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 describe('Testing DesktopSettings', () => {
-  it('Test changeEncoding() in DesktopSettings', () => {
-    // Initialization of IDesktopSettings
-    const desktopsettingsprops: IDesktopSettings = {
-      changeDesktopSettings: (testFunc2),
-      getConnectState: (testFunc1)
+  const labelRLE08 = 'RLE 8'
+  const labelRLE16 = 'RLE 16'
+
+  it('should notify encodings', async () => {
+    const settings: IDesktopSettings = {
+      changeDesktopSettings: jest.fn(),
+      getConnectState: jest.fn(() => 1)
     }
-
-    const ds = shallow(<DesktopSettings {...desktopsettingsprops} />)
-    const myInstance = ds.instance() as DesktopSettings
-    myInstance.changeEncoding(2)
-
-    // Output
-    expect(ds.prop('getConnectState')).toBe(testFunc1)
-    expect(ds.prop('changeEncoding')).toBe(myInstance.changeEncoding)
-    expect(myInstance.desktopsettings.encoding).toBe(2)
-    expect(value1).toBe(2)
-    console.log(ds.debug())
-    console.log(ds.props())
-  })
-
-  it('Test render() in DesktopSettings', () => {
-    // Initialization of IDesktopSettings
-    const desktopsettingsprops: IDesktopSettings = {
-      changeDesktopSettings: (testFunc2),
-      getConnectState: (testFunc1)
-    }
-
-    const ds = shallow(<DesktopSettings {...desktopsettingsprops} />)
-    const myInstance = ds.instance() as DesktopSettings
-    myInstance.changeEncoding(3)
-
-    // Output
-    expect(ds.prop('getConnectState')).toBe(testFunc1)
-    expect(ds.prop('changeEncoding')).toBe(myInstance.changeEncoding)
-    const ret = expect(ds).toMatchSnapshot()
-    console.info('ret', ret)
-    expect(value1).toBe(3)
-    console.log(ds.debug())
-    console.log(ds.props())
+    render(<DesktopSettings {...settings} />)
+    const encodingSelector = screen.getByRole<HTMLSelectElement>('combobox')
+    await userEvent.selectOptions(encodingSelector, screen.getByText<HTMLOptionElement>(labelRLE16))
+    expect(settings.changeDesktopSettings).toHaveBeenCalledWith({ encoding: '2' })
+    await userEvent.selectOptions(encodingSelector, screen.getByText<HTMLOptionElement>(labelRLE08))
+    expect(settings.changeDesktopSettings).toHaveBeenCalledWith({ encoding: '1' })
   })
 })
-
-function testFunc1 (): number {
-  return 1
-}
-
-class class1 {
-  encoding: number
-}
-
-let value1 = 0
-
-function testFunc2 (v: class1): void {
-  value1 = v.encoding
-}

@@ -5,77 +5,54 @@
 
 import React from 'react'
 import { IEncodingOptions, EncodingOptions } from '../reactjs/KVM/EncodingOptions'
-import { shallow } from 'enzyme'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
-describe('Testing EncodingOptions', () => {
-  it('Test onEncodingChange() in EncodingOptions', () => {
-    // Initialization of IEncodingOptions
-    const encodingoptionsprops: IEncodingOptions = {
-      changeEncoding: (testFunc2),
-      getConnectState: (testFunc1)
+describe('Testing DesktopSettings', () => {
+  const labelRLE08 = 'RLE 8'
+  const labelRLE16 = 'RLE 16'
+
+  it('should notify encodings', async () => {
+    const settings: IEncodingOptions = {
+      changeEncoding: jest.fn(),
+      getConnectState: jest.fn(() => 1)
     }
+    render(<EncodingOptions {...settings} />)
+    const encodingSelector = screen.getByRole<HTMLSelectElement>('combobox')
+    const optionRLE08 = screen.getByText<HTMLOptionElement>(labelRLE08)
+    const optionRLE16 = screen.getByText<HTMLOptionElement>(labelRLE16)
 
-    const eo = shallow(<EncodingOptions {...encodingoptionsprops} />)
-    eo.instance().setState = jest.fn()
-    const myInstance = eo.instance() as EncodingOptions
+    expect(encodingSelector).not.toBeNull()
+    expect(encodingSelector).not.toHaveAttribute('disabled')
+    expect(optionRLE08).not.toBeNull()
+    expect(optionRLE08.selected).toBeTruthy()
+    expect(optionRLE16).not.toBeNull()
+    expect(optionRLE16.selected).toBeFalsy()
 
-    myInstance.onEncodingChange(new TesClass())
-
-    // Output
-    expect(value1).toBe(1)
-    expect(myInstance.setState).toHaveBeenCalled()
-    console.log(eo.debug())
-    console.log(eo.props())
+    await userEvent.selectOptions(encodingSelector, optionRLE16)
+    expect(settings.changeEncoding).toHaveBeenCalledWith('2')
+    expect(encodingSelector).toHaveTextContent(labelRLE16)
+    await userEvent.selectOptions(encodingSelector, optionRLE08)
+    expect(settings.changeEncoding).toHaveBeenCalledWith('1')
+    expect(encodingSelector).toHaveTextContent(labelRLE08)
   })
 
-  it('Test render() in EncodingOptions with getConnectState() === 1', () => {
-    // Initialization of IEncodingOptions
-    const encodingoptionsprops: IEncodingOptions = {
-      changeEncoding: (testFunc2),
-      getConnectState: (testFunc1)
+  it('should be disabled in connect state 2', async () => {
+    const settings: IEncodingOptions = {
+      changeEncoding: jest.fn(),
+      getConnectState: jest.fn(() => 2)
     }
+    render(<EncodingOptions {...settings} />)
 
-    const eo = shallow(<EncodingOptions {...encodingoptionsprops} />)
+    const encodingSelector = screen.getByRole<HTMLSelectElement>('combobox')
+    const optionRLE16 = screen.getByText<HTMLOptionElement>(labelRLE16)
 
-    // Output
-    const ret = expect(eo).toMatchSnapshot()
-    console.info('ret', ret)
-    console.log(eo.debug())
-    console.log(eo.props())
-  })
+    expect(encodingSelector).not.toBeNull()
+    expect(encodingSelector).toHaveAttribute('disabled')
+    expect(optionRLE16).not.toBeNull()
+    expect(optionRLE16.selected).toBeFalsy()
 
-  it('Test render() in EncodingOptions with getConnectState() === 2', () => {
-    // Initialization of IEncodingOptions
-    const encodingoptionsprops: IEncodingOptions = {
-      changeEncoding: (testFunc2),
-      getConnectState: (testFunc3)
-    }
-
-    const eo = shallow(<EncodingOptions {...encodingoptionsprops} />)
-
-    // Output
-    const ret = expect(eo).toMatchSnapshot()
-    console.info('ret', ret)
-    console.log(eo.debug())
-    console.log(eo.props())
+    await userEvent.selectOptions(encodingSelector, optionRLE16)
+    expect(settings.changeEncoding).not.toHaveBeenCalled()
   })
 })
-
-function testFunc1 (): number {
-  return 1
-}
-
-function testFunc3 (): number {
-  return 2
-}
-
-let value1 = 0
-function testFunc2 (v: number): void {
-  ++value1
-}
-
-class TesClass {
-  public target = new class {
-    value: number = 1
-  }()
-}

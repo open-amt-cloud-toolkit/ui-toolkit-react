@@ -22,7 +22,15 @@ export interface IPropTerminal {
 }
 
 class Term extends React.Component<IPropTerminal> {
+  // this is for different react version 18 lifecycle functionality
+  // caused 2 terminal window components rather than one.
+  mountedWorkaround: boolean
   componentDidMount (): void {
+    if (this.mountedWorkaround) {
+      return
+    }
+    this.mountedWorkaround = true
+
     const element = document.getElementById('xterm') ?? ''
     const { xterm, handleKeyPress } = this.props
     if (isFalsy(element)) {
@@ -46,9 +54,9 @@ class Term extends React.Component<IPropTerminal> {
 
   render (): React.ReactNode {
     return (
-      <TerminalContainer>
-        <XTerm id="xterm" />
-      </TerminalContainer>
+      <div className="terminal">
+        <div className="terminal_xterm" id="xterm" />
+      </div>
     )
   }
 }
