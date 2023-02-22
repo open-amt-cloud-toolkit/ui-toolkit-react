@@ -2,7 +2,7 @@
 * Copyright (c) Intel Corporation 2019
 * SPDX-License-Identifier: Apache-2.0
 **********************************************************************/
-import { ILogger, AMTRedirector } from '@open-amt-cloud-toolkit/ui-toolkit/core'
+import { type ILogger, AMTRedirector } from '@open-amt-cloud-toolkit/ui-toolkit/core'
 // import { FileReader } from '../../core/FileReader'
 // import { TypeConverter } from "../../core/converter";
 
