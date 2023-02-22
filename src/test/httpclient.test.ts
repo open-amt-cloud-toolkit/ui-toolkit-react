@@ -16,8 +16,7 @@ describe('Test HttpClient class', () => {
     })
 
     // call HttpClient.get function
-    HttpClient.get('1.2.3.4:1234', 'apikey').catch(() =>
-      console.info('error occured')
+    HttpClient.get('1.2.3.4:1234', 'apikey').catch(() => { console.info('error occured') }
     )
   })
 
@@ -47,13 +46,12 @@ describe('Test HttpClient class', () => {
     })
 
     // call HttpClient.get function
-    HttpClient.post('99.2.3.4:1234', body).catch(() =>
-      console.info('error occured')
+    HttpClient.post('99.2.3.4:1234', body).catch(() => { console.info('error occured') }
     )
   })
 
   it('should test the post function for MPS server', () => {
-    HttpClient.fetch = jest.fn(async () => await Promise.resolve())
+    HttpClient.fetch = jest.fn(async () => { await Promise.resolve() })
 
     const body = JSON.stringify({
       apikey: 'xxxxx',
@@ -61,15 +59,13 @@ describe('Test HttpClient class', () => {
       payload: { guid: 'abcd-1234-efgh-5678', action: '20' }
     })
 
-    HttpClient.post('localhost/actions', body, true).catch(() =>
-      console.info('error occured')
+    HttpClient.post('localhost/actions', body, true).catch(() => { console.info('error occured') }
     )
   })
 
   it('should test the delete function', () => {
-    HttpClient.fetch = jest.fn(async () => await Promise.resolve())
-    HttpClient.delete('localhost/actions').catch(() =>
-      console.info('error occured')
+    HttpClient.fetch = jest.fn(async () => { await Promise.resolve() })
+    HttpClient.delete('localhost/actions').catch(() => { console.info('error occured') }
     )
   })
 })
