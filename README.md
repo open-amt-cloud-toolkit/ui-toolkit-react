@@ -1,7 +1,7 @@
 # UI Toolkit React
 
 [![Known Vulnerabilities](https://snyk.io/test/github/open-amt-cloud-toolkit/ui-toolkit/badge.svg?targetFile=package.json)](https://snyk.io/test/github/open-amt-cloud-toolkit/ui-toolkit?targetFile=package.json) ![Node.js CI](https://github.com/open-amt-cloud-toolkit/sample-web-ui/workflows/Node.js%20CI/badge.svg) 
-![codecov.io](https://codecov.io/github/open-amt-cloud-toolkit/ui-toolkit-react/coverage.svg?branch=main) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/open-amt-cloud-toolkit/ui-toolkit-react/badge)](https://api.securityscorecards.dev/projects/github.com/open-amt-cloud-toolkit/ui-toolkit-react)
+![codecov.io](https://codecov.io/github/open-amt-cloud-toolkit/ui-toolkit-react/coverage.svg?branch=main) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/open-amt-cloud-toolkit/ui-toolkit-react/badge)](https://api.securityscorecards.dev/projects/github.com/open-amt-cloud-toolkit/ui-toolkit-react) [![Discord Shield](https://discordapp.com/api/guilds/1063200098680582154/widget.png?style=shield)](https://discord.gg/yrcMp2kDWh)
 
 > Disclaimer: Production viable releases are tagged and listed under 'Releases'.  All other check-ins should be considered 'in-development' and should not be used in production
 
@@ -17,7 +17,7 @@ The UI Toolkit provides prebuilt, React-based components for integrating remote 
 
 To succesfully deploy the UI Toolkit using React, the following software must be installed on your development system:
 
-- [Node.js* LTS 12.x.x or newer](https://nodejs.org/en/)
+- [Node.js* LTS 18.x.x or newer](https://nodejs.org/en/)
 - [git](https://git-scm.com/downloads)
 - [Visual Studio Code](https://code.visualstudio.com/) or any other IDE of choice
 
@@ -58,12 +58,21 @@ The React app can be created in any preferred development directory. The MPS can
     On Your Network: http://172.16.17.4:3000
     ```
 
+<br>
 
-Learn how to add the KVM control to your new React app [here](https://open-amt-cloud-toolkit.github.io/docs/2.0/Tutorials/uitoolkit/#add-a-sample-control)
+## Additional Resources
 
+- For detailed documentation and Getting Started, [visit the docs site](https://open-amt-cloud-toolkit.github.io/docs).
 
-For detailed documentation about the UI Toolkit, see the [docs](https://open-amt-cloud-toolkit.github.io/docs/)
+- Looking to contribute? [Find more information here about contribution guidelines and practices](.\CONTRIBUTING.md).
 
+- Find a bug? Or have ideas for new features? [Open a new Issue](https://github.com/open-amt-cloud-toolkit/ui-toolkit-react/issues).
+
+- Need additional support or want to get the latest news and events about Open AMT? Connect with the team directly through Discord.
+
+    [![Discord Banner 1](https://discordapp.com/api/guilds/1063200098680582154/widget.png?style=banner2)](https://discord.gg/yrcMp2kDWh)
+
+<br>
 
 ## License Note
 
