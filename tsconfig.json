@@ -12,7 +12,8 @@
         "resolveJsonModule": true,
         "strictNullChecks": true,
         "declaration": true,
-        "declarationDir": "./dist"        
+        "declarationDir": "./dist",
+        "skipLibCheck": true
     },
     "include": [
         "./src/test/**/*",
