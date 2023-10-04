@@ -1,3 +1,46 @@
+<a name="3.0.4"></a>
+## [3.0.4] - 2023-10-04
+### Build
+- removes jenkinsfile ([#847](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/847)) (#93d47f9) 
+- **deps:** bump postcss from 8.4.24 to 8.4.31 ([#850](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/850)) (#797c8f2) 
+- **deps:** bump ws from 8.14.0 to 8.14.1 ([#818](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/818)) (#229516b) 
+- **deps:** bump i18next from 23.5.0 to 23.5.1 ([#817](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/817)) (#905e3f1) 
+- **deps:** bump step-security/harden-runner from 2.5.1 to 2.6.0 ([#848](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/848)) (#33ad80c) 
+- **deps:** bump [@open](https://github.com/open)-amt-cloud-toolkit/ui-toolkit ([#816](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/816)) (#9ca051b) 
+- **deps:** bump github/codeql-action from 2.21.5 to 2.21.6 ([#825](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/825)) (#4af4c45) 
+- **deps:** bump styled-components from 6.0.7 to 6.0.8 ([#824](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/824)) (#894d204) 
+- **deps:** bump sass from 1.66.1 to 1.67.0 ([#826](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/826)) (#23855bc) 
+- **deps:** bump github/codeql-action from 2.21.8 to 2.21.9 ([#841](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/841)) (#1a84095) 
+- **deps:** bump github/codeql-action from 2.21.6 to 2.21.7 ([#828](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/828)) (#29cfc3e) 
+- **deps:** bump github/codeql-action from 2.21.7 to 2.21.8 ([#833](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/833)) (#85e7e83) 
+- **deps:** bump actions/checkout from 4.0.0 to 4.1.0 ([#837](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/837)) (#48e51dd) 
+- **deps:** bump sass from 1.67.0 to 1.68.0 ([#836](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/836)) (#1b54ccc) 
+- **deps:** bump ws from 8.14.1 to 8.14.2 ([#834](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/834)) (#288b811) 
+- **deps:** bump actions/upload-artifact from 3.1.2 to 3.1.3 ([#814](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/814)) (#ef90bd6) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.6.1 to 20.6.2 ([#831](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/831)) (#8a194aa) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.6.2 to 20.6.3 ([#835](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/835)) (#d9627c8) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.6.3 to 20.7.0 ([#840](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/840)) (#1bfd1fb) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.6.0 to 20.6.1 ([#829](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/829)) (#fb632bf) 
+- **deps-dev:** bump [@testing](https://github.com/testing)-library/user-event from 14.5.0 to 14.5.1 ([#830](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/830)) (#ac04eb7) 
+- **deps-dev:** bump [@testing](https://github.com/testing)-library/user-event from 14.4.3 to 14.5.0 ([#827](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/827)) (#689e6bc) 
+- **deps-dev:** bump [@types](https://github.com/types)/ws from 8.5.5 to 8.5.6 ([#838](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/838)) (#7d79ca0) 
+- **deps-dev:** bump [@types](https://github.com/types)/md5 from 2.3.2 to 2.3.3 ([#842](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/842)) (#97f2bb0) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.5.9 to 20.6.0 ([#820](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/820)) (#eb7bb4a) 
+- **deps-dev:** bump jest from 29.6.4 to 29.7.0 ([#822](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/822)) (#55f4407) 
+- **deps-dev:** bump jest-environment-jsdom from 29.6.4 to 29.7.0 ([#823](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/823)) (#b34ae5d) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.7 to 18.2.8 ([#843](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/843)) (#a4f935d) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.7.0 to 20.7.1 ([#844](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/844)) (#13809f1) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.7.1 to 20.7.2 ([#845](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/845)) (#4e43e55) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.7.2 to 20.8.0 ([#846](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/846)) (#6bee402) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.8.0 to 20.8.2 ([#849](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/849)) (#010f64b) 
+- **deps-dev:** bump [@types](https://github.com/types)/jest from 29.5.4 to 29.5.5 ([#832](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/832)) (#49c9a28) 
+
+### Chore
+- update build tasks, package.json and changelog (#731da37) 
+
+### Docs
+- **readme:** update badges (#527a324) 
+
 <a name="3.0.3"></a>
 ## [3.0.3] - 2023-09-07
 ### Build
