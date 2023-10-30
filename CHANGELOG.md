@@ -1,3 +1,50 @@
+<a name="3.0.5"></a>
+## [3.0.5] - 2023-10-30
+### Build
+- **deps:** bump react-i18next from 13.2.2 to 13.3.0 ([#869](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/869)) (#7d46103) 
+- **deps:** bump sass from 1.69.4 to 1.69.5 ([#893](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/893)) (#32dd2aa) 
+- **deps:** bump [@open](https://github.com/open)-amt-cloud-toolkit/ui-toolkit ([#852](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/852)) (#e4e91ee) 
+- **deps:** bump github/codeql-action from 2.21.9 to 2.22.0 ([#855](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/855)) (#cf2890a) 
+- **deps:** bump sass from 1.68.0 to 1.69.0 ([#854](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/854)) (#f41d566) 
+- **deps:** bump react-i18next from 13.3.0 to 13.3.1 ([#889](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/889)) (#b3f681f) 
+- **deps:** bump github/codeql-action from 2.22.0 to 2.22.1 ([#856](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/856)) (#95cadcc) 
+- **deps:** bump ossf/scorecard-action from 2.3.0 to 2.3.1 ([#882](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/882)) (#6a600bf) 
+- **deps:** bump actions/setup-node from 3.8.1 to 4.0.0 ([#881](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/881)) (#2538385) 
+- **deps:** bump ossf/scorecard-action from 2.2.0 to 2.3.0 ([#857](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/857)) (#c197164) 
+- **deps:** bump sass from 1.69.3 to 1.69.4 ([#885](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/885)) (#eb6942a) 
+- **deps:** bump winston from 3.10.0 to 3.11.0 ([#858](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/858)) (#3e7efaf) 
+- **deps:** bump sass from 1.69.0 to 1.69.2 ([#862](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/862)) (#5a163c2) 
+- **deps:** bump styled-components from 6.0.9 to 6.1.0 ([#872](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/872)) (#6263a8e) 
+- **deps:** bump github/codeql-action from 2.22.1 to 2.22.2 ([#868](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/868)) (#6c2cd56) 
+- **deps:** bump actions/checkout from 4.1.0 to 4.1.1 ([#876](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/876)) (#38c7384) 
+- **deps:** bump styled-components from 6.0.8 to 6.0.9 ([#865](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/865)) (#89e1206) 
+- **deps:** bump i18next from 23.5.1 to 23.6.0 ([#878](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/878)) (#22d409a) 
+- **deps:** bump [@babel](https://github.com/babel)/traverse from 7.22.8 to 7.23.2 ([#879](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/879)) (#318d234) 
+- **deps:** bump github/codeql-action from 2.22.3 to 2.22.4 ([#880](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/880)) (#f6756c2) 
+- **deps:** bump github/codeql-action from 2.22.2 to 2.22.3 ([#871](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/871)) (#9590e54) 
+- **deps:** bump sass from 1.69.2 to 1.69.3 ([#867](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/867)) (#340cf0c) 
+- **deps:** bump github/codeql-action from 2.22.4 to 2.22.5 ([#894](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/894)) (#3245785) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.8.4 to 20.8.5 ([#870](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/870)) (#c102f32) 
+- **deps-dev:** bump [@testing](https://github.com/testing)-library/jest-dom from 6.1.3 to 6.1.4 ([#866](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/866)) (#ae806a2) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.8.5 to 20.8.7 ([#877](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/877)) (#c72b7e6) 
+- **deps-dev:** bump webpack from 5.88.2 to 5.89.0 ([#875](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/875)) (#a8df84e) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.12 to 18.2.13 ([#864](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/864)) (#c7818b4) 
+- **deps-dev:** bump [@types](https://github.com/types)/ws from 8.5.6 to 8.5.7 ([#863](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/863)) (#aebbc73) 
+- **deps-dev:** bump [@types](https://github.com/types)/jest from 29.5.5 to 29.5.6 ([#887](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/887)) (#775e319) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.8.2 to 20.8.4 ([#861](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/861)) (#aebce2c) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.10 to 18.2.12 ([#860](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/860)) (#8c476da) 
+- **deps-dev:** bump ts-loader from 9.4.4 to 9.5.0 ([#859](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/859)) (#80d199b) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.13 to 18.2.14 ([#886](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/886)) (#e96bdda) 
+- **deps-dev:** bump [@types](https://github.com/types)/md5 from 2.3.3 to 2.3.4 ([#884](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/884)) (#9e435e1) 
+- **deps-dev:** bump [@types](https://github.com/types)/ws from 8.5.7 to 8.5.8 ([#888](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/888)) (#8e45540) 
+- **deps-dev:** bump eslint-plugin-import from 2.28.1 to 2.29.0 ([#890](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/890)) (#00b5f57) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.8.7 to 20.8.8 ([#891](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/891)) (#f2fb0bf) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.8.8 to 20.8.9 ([#892](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/892)) (#c9bc6d8) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.8 to 18.2.10 ([#853](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/853)) (#360a135) 
+
+### Chore
+- update build tasks, package.json and changelog (#d36d9d7) 
+
 <a name="3.0.4"></a>
 ## [3.0.4] - 2023-10-04
 ### Build
