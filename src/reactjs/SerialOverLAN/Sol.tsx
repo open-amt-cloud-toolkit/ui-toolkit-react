@@ -4,7 +4,7 @@
 **********************************************************************/
 
 import React from 'react'
-import { AmtTerminal, AMTRedirector, Protocol, ConsoleLogger, LogLevel, TerminalDataProcessor } from '@open-amt-cloud-toolkit/ui-toolkit/core'
+import { AmtTerminal, AMTRedirector, Protocol, TerminalDataProcessor, RedirectorConfig } from '@open-amt-cloud-toolkit/ui-toolkit/core'
 import Style from 'styled-components'
 import { Terminal } from 'xterm'
 import Term from './Terminal'
@@ -54,7 +54,6 @@ export class Sol extends React.Component<SOLProps, SOLStates> {
   fr: FileReader
   constructor (props: SOLProps) {
     super(props)
-    this.logger = new ConsoleLogger(LogLevel.ERROR)
     this.state = {
       isConnected: false,
       SOLstate: 0,
@@ -72,20 +71,20 @@ export class Sol extends React.Component<SOLProps, SOLStates> {
   init = (): void => {
     const server: string = this.props.mpsServer != null ? this.props.mpsServer.replace('http', 'ws') : ''
     const deviceUuid: string = this.props.deviceId != null ? this.props.deviceId : ''
+    const config: RedirectorConfig = {
+      protocol: Protocol.SOL,
+      fr: new FileReader(),
+      host: deviceUuid,
+      port: 16994,
+      user: '',
+      pass: '',
+      tls: 0,
+      tls1only: 0,
+      authToken:  this.props.authToken,
+      server: `${server}/relay`
+    }
     this.terminal = new AmtTerminal()
-    this.redirector = new AMTRedirector(
-      this.logger,
-      Protocol.SOL,
-      new FileReader(),
-      deviceUuid,
-      16994,
-      '',
-      '',
-      0,
-      0,
-      this.props.authToken,
-      `${server}/relay`
-    )
+    this.redirector = new AMTRedirector(config)
     this.dataProcessor = new TerminalDataProcessor(this.terminal)
     this.terminal.onSend = this.redirector.send.bind(this.redirector)
     this.redirector.onNewState = this.terminal.StateChange.bind(this.terminal)

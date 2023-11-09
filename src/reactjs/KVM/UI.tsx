@@ -4,7 +4,7 @@
  * Author : Ramu Bachala
  **********************************************************************/
 
-import { IDataProcessor, IKvmDataCommunicator, ILogger, LogLevel, DataProcessor, Desktop, AMTKvmDataRedirector, AMTDesktop, Protocol, ConsoleLogger, MouseHelper, KeyBoardHelper } from '@open-amt-cloud-toolkit/ui-toolkit/core'
+import { IDataProcessor, IKvmDataCommunicator, DataProcessor, Desktop, AMTKvmDataRedirector, AMTDesktop, Protocol, MouseHelper, KeyBoardHelper, RedirectorConfig } from '@open-amt-cloud-toolkit/ui-toolkit/core'
 import { Header } from './Header'
 import { PureCanvas } from './PureCanvas'
 import { isFalsy } from '../shared/Utilities'
@@ -27,7 +27,6 @@ export class KVM extends React.Component<KVMProps, { kvmstate: number, encodingO
   dataProcessor: IDataProcessor | any
   redirector: IKvmDataCommunicator | any
   mouseHelper: MouseHelper | any
-  logger: ILogger
   keyboard: KeyBoardHelper | any
   desktopSettingsChange = false
   ctx: CanvasRenderingContext2D
@@ -35,7 +34,6 @@ export class KVM extends React.Component<KVMProps, { kvmstate: number, encodingO
   constructor (props: KVMProps) {
     super(props)
     this.state = { kvmstate: 0, encodingOption: 1 }
-    this.logger = new ConsoleLogger(LogLevel.ERROR)
     this.saveContext = this.saveContext.bind(this)
     this.startKVM = this.startKVM.bind(this)
     this.stopKVM = this.stopKVM.bind(this)
@@ -46,7 +44,6 @@ export class KVM extends React.Component<KVMProps, { kvmstate: number, encodingO
   }
 
   saveContext (ctx: CanvasRenderingContext2D): void {
-    this.logger.debug('save context called')
     this.ctx = ctx
     this.init()
   }
@@ -54,9 +51,21 @@ export class KVM extends React.Component<KVMProps, { kvmstate: number, encodingO
   init (): void {
     const deviceUuid: string = this.props.deviceId != null ? this.props.deviceId : ''
     const server: string = this.props.mpsServer != null ? this.props.mpsServer.replace('http', 'ws') : ''
-    this.module = new AMTDesktop(this.logger, this.ctx)
-    this.redirector = new AMTKvmDataRedirector(this.logger, Protocol.KVM, new FileReader(), deviceUuid, 16994, '', '', 0, 0, this.props.authToken, server)
-    this.dataProcessor = new DataProcessor(this.logger, this.redirector, this.module)
+    const config: RedirectorConfig = {
+      protocol: Protocol.KVM,
+      fr: new FileReader(),
+      host: deviceUuid,
+      port: 16994,
+      user: '',
+      pass: '',
+      tls: 0,
+      tls1only: 0,
+      authToken: this.props.authToken,
+      server: server
+    }
+    this.module = new AMTDesktop(this.ctx)
+    this.redirector = new AMTKvmDataRedirector(config)
+    this.dataProcessor = new DataProcessor(this.redirector, this.module)
     this.mouseHelper = new MouseHelper(this.module, this.redirector, this.props.mouseDebounceTime < 200 ? 200 : this.props.mouseDebounceTime) // anything less than 200 ms causes timeout
     this.keyboard = new KeyBoardHelper(this.module, this.redirector)
 
