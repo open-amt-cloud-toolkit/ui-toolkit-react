@@ -72,6 +72,7 @@ export class Sol extends React.Component<SOLProps, SOLStates> {
     const server: string = this.props.mpsServer != null ? this.props.mpsServer.replace('http', 'ws') : ''
     const deviceUuid: string = this.props.deviceId != null ? this.props.deviceId : ''
     const config: RedirectorConfig = {
+      mode: 'sol',
       protocol: Protocol.SOL,
       fr: new FileReader(),
       host: deviceUuid,

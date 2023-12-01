@@ -52,6 +52,7 @@ export class KVM extends React.Component<KVMProps, { kvmstate: number, encodingO
     const deviceUuid: string = this.props.deviceId != null ? this.props.deviceId : ''
     const server: string = this.props.mpsServer != null ? this.props.mpsServer.replace('http', 'ws') : ''
     const config: RedirectorConfig = {
+      mode: 'kvm',
       protocol: Protocol.KVM,
       fr: new FileReader(),
       host: deviceUuid,
