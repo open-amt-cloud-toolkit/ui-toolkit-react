@@ -1,3 +1,17 @@
+<a name="3.1.2"></a>
+## [3.1.2] - 2023-12-04
+### Build
+- **deps:** bump [@fortawesome](https://github.com/fortawesome)/free-solid-svg-icons from 6.5.0 to 6.5.1 ([#957](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/957)) (#2e032ea) 
+- **deps:** bump [@fortawesome](https://github.com/fortawesome)/fontawesome-svg-core from 6.5.0 to 6.5.1 ([#956](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/956)) (#5885c3d) 
+- **deps:** bump [@open](https://github.com/open)-amt-cloud-toolkit/ui-toolkit from 3.1.2 to 3.2.0 ([#955](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/955)) (#383d5bd) 
+- **deps-dev:** bump [@testing](https://github.com/testing)-library/jest-dom from 6.1.4 to 6.1.5 ([#954](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/954)) (#1a4efd0) 
+- **deps-dev:** bump [@adobe](https://github.com/adobe)/css-tools from 4.3.1 to 4.3.2 ([#953](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/953)) (#d1d7fb0) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.10.0 to 20.10.1 ([#950](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/950)) (#d1a9f3c) 
+- **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/eslint-plugin ([#949](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/949)) (#7b1e398) 
+
+### Chore
+- update build tasks, package.json and changelog (#09741a3) 
+
 <a name="3.1.1"></a>
 ## [3.1.1] - 2023-11-29
 ### Build
