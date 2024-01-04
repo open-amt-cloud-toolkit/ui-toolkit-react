@@ -10,7 +10,8 @@ module.exports = {
   mode: 'production',
   entry: {
     kvm: './src/reactjs/KVM/index.tsx',
-    sol: './src/reactjs/SerialOverLAN/index.tsx'
+    sol: './src/reactjs/SerialOverLAN/index.tsx',
+    ider: './src/reactjs/IDER/index.tsx',
   },
   // sourceMap in tsconfig which holds information about your original files when the code is minified
   // devtool deal with existing source maps
