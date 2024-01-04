@@ -22,6 +22,13 @@ const reactConfig = {
         name: 'ui-toolkit/reactjs/sol',
         type: 'umd'
       }
+    },
+    ider: {
+      import: './src/reactjs/IDER/AttachDiskImage.tsx',
+      library: {
+        name: 'ui-toolkit/reactjs/ider',
+        type: 'umd'
+      }
     }
   },
   resolve: {
