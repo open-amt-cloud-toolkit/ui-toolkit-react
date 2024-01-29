@@ -6,7 +6,7 @@
 import { prepareHeaders } from '../shared/Utilities'
 
 export const HttpClient = {
-  async get (url, options = {}): Promise<any> {
+  async get (url: string, options = {}): Promise<any> {
     const jsonHeaders = prepareHeaders()
     return await HttpClient.fetch(url, {
       ...options,
@@ -15,7 +15,7 @@ export const HttpClient = {
     })
   },
 
-  async post (url, body = {}, options = {}): Promise<any> {
+  async post (url: string, body = {}, options = {}): Promise<any> {
     const jsonHeaders = prepareHeaders()
     return await HttpClient.fetch(url, {
       ...options,
@@ -25,7 +25,7 @@ export const HttpClient = {
     })
   },
 
-  async delete (url, options = {}): Promise<any> {
+  async delete (url: string, options = {}): Promise<any> {
     const jsonHeaders = prepareHeaders()
     return await HttpClient.fetch(url, {
       ...options,
@@ -34,7 +34,7 @@ export const HttpClient = {
     })
   },
 
-  async fetch (url, options = {}): Promise<any> {
+  async fetch (url: string, options = {}): Promise<any> {
     (options as any).mode = 'cors';
     (options as any).credentials = 'include';
     (options as any).withCredentials = true
