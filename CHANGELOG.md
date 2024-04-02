@@ -1,3 +1,8 @@
+<a name="3.2.5"></a>
+## [3.2.5] - 2024-04-02
+### Chore
+- update build tasks, package.json and changelog (#3710c8c) 
+
 <a name="3.2.4"></a>
 ## [3.2.4] - 2024-04-02
 ### Build
