@@ -1,5 +1,46 @@
+<a name="3.2.4"></a>
+## [3.2.4] - 2024-04-02
+### Build
+- **deps:** bump [@fortawesome](https://github.com/fortawesome)/free-solid-svg-icons from 6.5.1 to 6.5.2 ([#1152](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1152)) (#133e637) 
+- **deps:** bump [@fortawesome](https://github.com/fortawesome)/fontawesome-svg-core from 6.5.1 to 6.5.2 ([#1153](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1153)) (#8833cae) 
+- **deps:** bump wagoid/commitlint-github-action from 5.5.1 to 6.0.0 ([#1149](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1149)) (#da27ecf) 
+- **deps:** bump github/codeql-action from 3.24.6 to 3.24.7 ([#1121](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1121)) (#eae55c5) 
+- **deps:** bump i18next-browser-languagedetector from 7.2.0 to 7.2.1 ([#1151](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1151)) (#efb9768) 
+- **deps:** bump actions/add-to-project from 0.6.1 to 1.0.0 ([#1144](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1144)) (#ef125c0) 
+- **deps:** bump actions/checkout from 4.1.1 to 4.1.2 ([#1122](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1122)) (#cfb0b76) 
+- **deps:** bump wagoid/commitlint-github-action from 5.4.5 to 5.5.1 ([#1147](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1147)) (#06ab21e) 
+- **deps:** bump sass from 1.71.1 to 1.72.0 ([#1126](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1126)) (#3521bad) 
+- **deps:** bump winston from 3.12.0 to 3.13.0 ([#1141](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1141)) (#f5349f7) 
+- **deps:** bump codecov/codecov-action from 4.1.0 to 4.1.1 ([#1142](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1142)) (#0d3b83b) 
+- **deps:** bump github/codeql-action from 3.24.7 to 3.24.8 ([#1128](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1128)) (#d190b83) 
+- **deps:** bump github/codeql-action from 3.24.8 to 3.24.9 ([#1139](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1139)) (#85f31b6) 
+- **deps:** bump cycjimmy/semantic-release-action from 4.0.0 to 4.1.0 ([#1134](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1134)) (#ef559ff) 
+- **deps:** bump actions/add-to-project from 0.6.0 to 0.6.1 ([#1133](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1133)) (#d9a111c) 
+- **deps:** bump i18next from 23.10.0 to 23.10.1 ([#1117](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1117)) (#25691a4) 
+- **deps-dev:** bump webpack from 5.90.3 to 5.91.0 ([#1137](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1137)) (#e4fb1c7) 
+- **deps-dev:** bump webpack-dev-server from 5.0.3 to 5.0.4 ([#1135](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1135)) (#216401d) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.11.29 to 20.11.30 ([#1131](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1131)) (#0ad4196) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.11.28 to 20.11.29 ([#1129](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1129)) (#776ef1f) 
+- **deps-dev:** bump [@testing](https://github.com/testing)-library/react from 14.2.1 to 14.2.2 ([#1138](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1138)) (#6805c79) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.11.27 to 20.11.28 ([#1127](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1127)) (#b9b9032) 
+- **deps-dev:** bump express from 4.18.2 to 4.19.2 ([#1143](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1143)) (#3f127b9) 
+- **deps-dev:** bump follow-redirects from 1.15.5 to 1.15.6 ([#1125](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1125)) (#f6c3663) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.22 to 18.2.23 ([#1145](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1145)) (#145b928) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.11.25 to 20.11.27 ([#1123](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1123)) (#1b43477) 
+- **deps-dev:** bump [@types](https://github.com/types)/react-dom from 18.2.21 to 18.2.22 ([#1124](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1124)) (#7f8add4) 
+- **deps-dev:** bump [@types](https://github.com/types)/node from 20.11.30 to 20.12.2 ([#1150](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1150)) (#3f687ac) 
+- **deps-dev:** bump webpack-dev-server from 5.0.2 to 5.0.3 ([#1120](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1120)) (#2836aed) 
+- **deps-dev:** bump typescript from 5.4.2 to 5.4.3 ([#1136](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1136)) (#241ce60) 
+
+### Chore
+- update build tasks, package.json and changelog (#0368518) 
+
+### Docs
+- update badge links (#c5eca5d) 
+- update badge styles ([#1146](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1146)) (#1e475cd) 
+
 <a name="3.2.3"></a>
-## [3.2.3] - 2024-03-08
+## [3.2.3] - 2024-03-08.
 ### Build
 - **deps:** bump github/codeql-action from 3.24.3 to 3.24.5 ([#1101](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1101)) (#763ea68) 
 - **deps:** bump github/codeql-action from 3.24.0 to 3.24.1 ([#1088](https://github.com/open-amt-cloud-toolkit/ui-toolkit/issues/1088)) (#0366004) 
