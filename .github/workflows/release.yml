@@ -9,32 +9,36 @@ name: Semantic-Release CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Harden Runner
-      uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
-      with:
-        egress-policy: audit
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
 
-    - name: Checkout
-      uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
-      with:
-        node-version: "20.x"
-    - run: npm ci
-    - run: npm run build-ext --if-present
-    - run: rsync -a package.json README.md ./dist/
-    - name: Semantic Release
-      uses: cycjimmy/semantic-release-action@cb425203a562475bca039ba4dbf90c7f9ac790f4 # v4.1.0
-      with:
-        semantic_version: 19.0.5  # It is recommended to specify specifying version range
-                                    # for semantic-release.
-      env:
-        GITHUB_TOKEN: ${{ secrets.ROSIE_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }} 
+      - name: Checkout
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          persist-credentials: false
+      - name: Use Node.js 20.x
+
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version: "20.x"
+      - run: npm ci
+      - run: npm run build-ext --if-present
+      - run: rsync -a package.json README.md ./dist/
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@cb425203a562475bca039ba4dbf90c7f9ac790f4 # v4.1.0
+        with:
+          semantic_version:
+            19.0.5 # It is recommended to specify specifying version range
+            # for semantic-release.
+        env:
+          GITHUB_TOKEN: ${{ secrets.ROSIE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
