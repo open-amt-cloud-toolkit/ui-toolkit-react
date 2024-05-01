@@ -30,6 +30,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@open-amt-cloud-toolkit/ui-toolkit": "^3.2.4",
+    "@xterm/xterm": "^5.5.0",
     "i18next": "^23.2.1",
     "i18next-browser-languagedetector": "^7.0.1",
     "md5": "^2.2.1",
@@ -38,8 +39,7 @@
     "sass": "^1.56.1",
     "styled-components": "^6.0.3",
     "winston": "^3.0.0",
-    "ws": "^8.11.0",
-    "xterm": "^5.0.0"
+    "ws": "^8.11.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.0.0",
