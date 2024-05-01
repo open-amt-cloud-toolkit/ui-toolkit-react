@@ -5,7 +5,7 @@
 
 import React from 'react'
 import Term, { IPropTerminal } from '../reactjs/SerialOverLAN/Terminal'
-import { Terminal as XTerm } from 'xterm'
+import { Terminal as XTerm } from '@xterm/xterm'
 import { render } from '@testing-library/react'
 
 describe('Testing SOL Terminal', () => {

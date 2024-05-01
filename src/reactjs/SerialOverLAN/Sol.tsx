@@ -6,9 +6,9 @@
 import React from 'react'
 import { AmtTerminal, AMTRedirector, Protocol, TerminalDataProcessor, RedirectorConfig } from '@open-amt-cloud-toolkit/ui-toolkit/core'
 import Style from 'styled-components'
-import { Terminal } from 'xterm'
+import { Terminal } from '@xterm/xterm'
 import Term from './Terminal'
-import 'xterm/css/xterm.css'
+import '@xterm/xterm/css/xterm.css'
 import './sol.scss'
 
 const StyledDiv = Style.div`
