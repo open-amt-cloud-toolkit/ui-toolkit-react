@@ -1,3 +1,5 @@
+## [3.2.7](https://github.com/open-amt-cloud-toolkit/ui-toolkit-react/compare/v3.2.6...v3.2.7) (2024-07-09)
+
 <a name="3.2.5"></a>
 ## [3.2.5] - 2024-04-02
 ### Chore
